@@ -1,0 +1,154 @@
+/* General Styles */
+
+ /* Animated Heading */
+ .animated-heading {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 20px;
+    font-weight: bold;
+    color: #004d40;
+    animation: fadeIn 3s ease-in-out;
+  }
+
+  /* Smaller, Animated Heading */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Orders Table - Side Text */
+  .order-placed {
+    font-size: 0.9rem;
+    color: #00796b;
+    font-weight: 400;
+    margin-top: -20px;
+  }
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #f5f7fa, #c3cfe2);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    color: #343a40;
+}
+
+h1, h3, h4 {
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(to right, #00796b, #004d40);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #ffeb3b !important;
+}
+
+.nav-link {
+    color: #fff !important;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #ffeb3b !important;
+}
+
+/* Page Heading */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 3rem;
+    font-weight: bold;
+    animation: fadeIn 2s ease-in-out;
+    color: #004d40;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    margin-top: 30px;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #004d40;
+    color: #fff;
+}
+
+td {
+    background-color: #fff;
+    color: #333;
+}
+
+td button {
+    border-radius: 8px;
+}
+
+td select {
+    border-radius: 8px;
+}
+
+/* Buttons */
+.btn {
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    border-radius: 10px;
+}
+
+.btn-primary {
+    background-color: #00796b;
+    border: none;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #004d40;
+    transform: scale(1.05);
+}
+
+.btn-outline-success {
+    border: 2px solid #004d40;
+    color: #004d40;
+}
+
+.btn-outline-success:hover {
+    background-color: #004d40;
+    color: #fff;
+}
+
+/* Total Price Section */
+#total-price {
+    margin-top: 20px;
+    text-align: end;
+}
+
+#total-price h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #004d40;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

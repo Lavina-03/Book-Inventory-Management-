@@ -1,0 +1,134 @@
+Book Inventory Management System
+This project is a web-based Book Inventory Management System built using Express.js, MySQL (via MySQL Workbench), HTML, CSS, JavaScript, and Bootstrap. It allows users to manage book inventory, perform CRUD operations, and manage book orders efficiently.
+
+Features
+CRUD Operations: Create, Read, Update, and Delete books in the inventory.
+Order Management: Add books to orders and calculate the total price.
+Book Details: Edit and update book details (title, ISBN, price, stock, etc.).
+User Authentication: Login, logout, and register users for access control.
+Book Status: Track the shipping status of orders (e.g., shipped, pending).
+Bootstrap Integration: Use of Bootstrap for responsive UI design.
+Dynamic Database Operations: Interaction with a MySQL database to store book data and order information.
+Technologies Used
+Frontend: HTML, CSS, JavaScript, Bootstrap
+Backend: Node.js, Express.js
+Database: MySQL (MySQL Workbench)
+Tools: Nodemon, Body Parser, Mongoose (optional)
+Getting Started
+Prerequisites
+Make sure you have the following installed:
+
+Node.js: Download Node.js
+MySQL Workbench: Download MySQL Workbench
+Setup
+Clone the repository or create a new folder for your project:
+
+bash
+Copy code
+git clone <repository-url> 
+cd <project-folder>
+Initialize the Node project:
+
+bash
+Copy code
+npm init -y
+Install dependencies:
+
+Install express to handle routing:
+bash
+Copy code
+npm install express --save
+Install mysql2 to connect with the MySQL database:
+bash
+Copy code
+npm install mysql2 --save
+Install nodemon for automatic server restarts:
+bash
+Copy code
+npm install nodemon --save-dev
+Install body-parser to parse incoming request bodies:
+bash
+Copy code
+npm install body-parser --save
+Install bootstrap for responsive design:
+bash
+Copy code
+npm install bootstrap --save
+Database Setup:
+
+Use MySQL Workbench to create a database and table. Example SQL query:
+sql
+Copy code
+CREATE DATABASE book_inventory;
+USE book_inventory;
+CREATE TABLE books (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(255),
+    isbn VARCHAR(20),
+    category VARCHAR(100),
+    price DECIMAL(10, 2),
+    stock INT,
+    status VARCHAR(50)
+);
+Project Structure:
+
+index.js: Main server file to handle routes (GET, POST, PUT, DELETE) and database operations.
+views/: Contains HTML files for Home, Orders, Books, About Us, Login, Logout, and Register sections.
+static/: Folder for static assets such as CSS files, images, etc.
+public/: Contains Bootstrap and other necessary assets.
+models/: Contains database models (optional, if you use Mongoose).
+Running the Application:
+
+In your project folder, start the server using Nodemon:
+
+bash
+Copy code
+npx nodemon index.js
+Alternatively, you can use:
+
+bash
+Copy code
+node index.js
+The server will start on port 3000 by default. Ensure the port is not already in use, or change it in index.js if needed.
+
+Accessing the Application:
+
+Open your browser and go to http://localhost:3000 to access the application.
+Endpoints
+GET /: Home page displaying the book inventory.
+GET /books: View list of all books.
+POST /books: Add a new book to the inventory.
+PUT /books/:id: Edit the details of a book.
+DELETE /books/:id: Delete a book from the inventory.
+GET /orders: View the current orders.
+POST /orders: Add a book to the order list with the total price.
+POST /login: User login.
+POST /register: User registration.
+GET /logout: Logout the user.
+Folder Structure
+bash
+Copy code
+/project-folder
+├── /views
+│   ├── home.html
+│   ├── books.html
+│   ├── orders.html
+│   ├── about.html
+│   ├── login.html
+│   ├── register.html
+│   └── logout.html
+├── /static
+│   ├── css/
+│   ├── images/
+│   └── js/
+├── index.js
+├── package.json
+└── /node_modules
+How to Use CRUD Operations
+Add a Book: Go to the Home page, fill in the details, and click "Add Book".
+Edit a Book: Click on the "Edit" button next to a book, modify its details, and save changes.
+Delete a Book: Click on the "Delete" button to remove a book from the inventory.
+Order a Book: On the Books page, click the "Add to Order" button to add a book to the order page.
+Troubleshooting
+If nodemon is not working, try running node index.js directly.
+If the port is already in use, change the port number in index.js or kill the process occupying it.

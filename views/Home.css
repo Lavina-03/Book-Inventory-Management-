@@ -1,0 +1,217 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #f5f7fa, #c3cfe2); /* Same background style */
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  color: #343a40;
+}
+
+h1, h3, h4 {
+  color: #333;
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(to right, #00796b, #004d40);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #ffeb3b !important;
+}
+
+.nav-link {
+  color: #fff !important;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #ffeb3b !important;
+}
+
+/* Page Heading */
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 3rem;
+  font-weight: bold;
+  animation: fadeIn 2s ease-in-out;
+  color: #004d40;
+}
+
+/* Updated layout for Image and Text (No box) */
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: none;
+  padding: 40px;
+  margin-bottom: 40px;
+  color: #004d40;
+  animation: slideIn 2s ease-in-out;
+}
+
+.about-section img {
+  max-width: 50%;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-right: 20px;
+}
+
+.about-section .content {
+  max-width: 45%;
+}
+
+.about-section p {
+  font-size: 1.3rem;
+  line-height: 1.8;
+  color: #333;
+}
+
+/* Form Inputs */
+.form-label {
+  font-weight: bold;
+  color: #004d40;
+}
+
+.form-control {
+  border-radius: 8px;
+  border: 1px solid #b0bec5;
+  transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #00796b;
+  box-shadow: 0 0 6px rgba(0, 121, 107, 0.6);
+}
+
+.form-select {
+  border-radius: 8px;
+}
+
+/* Buttons */
+.btn {
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  border-radius: 10px;
+}
+
+.btn-primary {
+  background-color: #00796b;
+  border: none;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #004d40;
+  transform: scale(1.05);
+}
+
+.btn-outline-success {
+  border: 2px solid #004d40;
+  color: #004d40;
+}
+
+.btn-outline-success:hover {
+  background-color: #004d40;
+  color: #fff;
+}
+
+/* Results Section */
+#results {
+  margin-top: 30px;
+}
+
+#results h3 {
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #004d40;
+}
+
+#title-list, #status-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.list-group-item {
+  border: 1px solid #cfd8dc;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  padding: 10px 15px;
+  background-color: #fff;
+  color: #004d40;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.list-group-item:hover {
+  background-color: #e0f2f1;
+  color: #004d40;
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateY(50px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+h1 {
+  font-size: 2.5rem; /* Reduced size for a lighter look */
+  font-weight: 300;  /* Lighter weight */
+  color: #004d40;
+  text-align: center;
+  margin-top: 20px;
+  letter-spacing: 1px; /* Subtle letter-spacing for refinement */
+  text-transform: capitalize;
+  animation: fadeIn 2s ease-in-out;
+  line-height: 1.5; /* Adjust line-height for a more spacious feel */
+}
+
+/* Optional: Add a smooth underline effect */
+h1::after {
+  content: "";
+  position: absolute;
+  bottom: -5px; /* Position just below the text */
+  left: 50%;
+  width: 40%;
+  height: 2px;
+  background-color: #00796b;
+  border-radius: 2px;
+  transform: translateX(-50%);
+  opacity: 0;
+  animation: underlineExpand 0.6s ease-in-out forwards;
+}
+
+/* Underline animation */
+@keyframes underlineExpand {
+  0% {
+      width: 0;
+      opacity: 0;
+  }
+  100% {
+      width: 40%;
+      opacity: 1;
+  }
+}
+
+/* Subtle text shadow to enhance visibility */
+h1 {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}

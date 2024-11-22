@@ -1,0 +1,269 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #f5f7fa, #c3cfe2);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    color: #343a40;
+}
+
+h1, h3, h4 {
+    color: #333;
+}
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(to right, #00796b, #004d40);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #ffeb3b !important;
+}
+
+.nav-link {
+    color: #fff !important;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: #ffeb3b !important;
+}
+.btn1{
+    color: white;
+}
+.btn1:hover{
+    color: #ffeb3b !important;
+}
+/* Page Heading */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 3rem;
+    font-weight: bold;
+    animation: fadeIn 2s ease-in-out;
+    color: #004d40;
+}
+
+/* Card Style */
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    backdrop-filter: blur(6px);
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+.bg-primary {
+    background-color: #00796b !important;
+}
+/* Form Inputs */
+.form-label {
+    font-weight: bold;
+    color: #004d40;
+}
+
+.form-control {
+    border-radius: 8px;
+    border: 1px solid #b0bec5;
+    transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: #00796b;
+    box-shadow: 0 0 6px rgba(0, 121, 107, 0.6);
+}
+
+.form-select {
+    border-radius: 8px;
+}
+
+/* Buttons */
+.btn {
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+    border-radius: 10px;
+}
+
+.btn-primary {
+    background-color: #00796b;
+    border: none;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #004d40;
+    transform: scale(1.05);
+}
+
+.btn-outline-success {
+    border: 2px solid #004d40;
+    color: #004d40;
+}
+
+.btn-outline-success:hover {
+    background-color: #004d40;
+    color: #fff;
+}
+
+/* Table Styling */
+.table {
+    margin-top: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    animation: fadeIn 2s ease-in-out;
+    width: 100%; /* Ensure the table takes up the full width */
+}
+
+.table th {
+    background-color: #00796b;
+    color: #fff;
+    text-align: center;
+    padding: 12px 15px;
+}
+
+.table td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 12px 15px;
+}
+
+.table td button {
+    font-size: 1rem;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: transform 0.2s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.table td .btn-warning {
+    color: #fff;
+    background-color: #ffb200;
+    border: none;
+}
+
+.table td .btn-danger {
+    color: #fff;
+    background-color: #dc3545;
+    border: none;
+}
+
+.table td .btn-warning:hover {
+    background-color: #e68900;
+    transform: scale(1.05);
+}
+
+.table td .btn-danger:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+/* Add a horizontal scroll if the table overflows */
+.table-responsive {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Adjust table to fit well inside the container */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0.95);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+/* Header styling */
+header {
+    text-align: center;
+    margin-bottom: 4rem; /* Adjust the bottom margin */
+}
+
+h1.text {
+    font-size: 2.5rem; /* Keep the font size moderate for elegance */
+    font-weight: 300;  /* Lighter font weight for a refined look */
+    color: #004d40;
+    text-align: center;
+    letter-spacing: 1px; /* Subtle letter-spacing */
+    text-transform: capitalize;
+    line-height: 1.5; /* More spacious text */
+    margin-top: 20px;
+    animation: fadeInUp 1.5s ease-in-out; /* Fade-in and slide-up animation */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Soft shadow for visibility */
+}
+
+/* Animation for fadeIn and slide-up */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Optional: Add a subtle underline animation */
+h1.text::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 40%;
+    height: 2px;
+    background-color: #00796b;
+    border-radius: 2px;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: underlineExpand 0.6s ease-in-out forwards;
+}
+
+/* Underline animation effect */
+@keyframes underlineExpand {
+    0% {
+        width: 0;
+        opacity: 0;
+    }
+    100% {
+        width: 40%;
+        opacity: 1;
+    }
+}
